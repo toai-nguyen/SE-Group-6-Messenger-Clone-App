@@ -198,7 +198,7 @@ const AuthForm = () => {
                     </div>
                     <div
                         onClick={toggleVariant}
-                        className="underline cursor-pointer"
+                        className="underline cursor-pinter"
                         >
                             {variant=='LOGIN'?'Create an account':'Login'}
                     </div>
