@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 
-import Prisma from "@/app/libs/primadb";
+import prisma from "@/app/libs/primadb";
 import { NextResponse } from "next/server";
 import { info } from "console";
 
@@ -21,7 +21,7 @@ export async function POST(
     
     const hashedPassword = await bcrypt.hash(password,12);
 
-    const user = await Prisma.user.create({
+    const user = await prisma.user.create({
         data:{
             email,
             name,

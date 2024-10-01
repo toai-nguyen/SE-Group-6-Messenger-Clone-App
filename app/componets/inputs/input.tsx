@@ -5,7 +5,6 @@ import {
     FieldValues,
     UseFormRegister
 } from 'react-hook-form';
-import { DiExtjs } from 'react-icons/di';
 
 interface InputProps {
     label: string;
@@ -15,17 +14,17 @@ interface InputProps {
     register: UseFormRegister<FieldValues>,
     errors: FieldErrors,
     disabled?: boolean;
-    }
+}
 
 const Input: React.FC<InputProps> = ({
-    label:string,
+    label,
     id,
     type,
     required,
     register,
     errors,
     disabled,
-    }) => {
+}) => {
     return (
         <div>
             <label
@@ -37,7 +36,7 @@ const Input: React.FC<InputProps> = ({
             text-gray-900
             " 
             htmlFor={id}>
-
+                {label}
             </label>
             <div className="mt-2">
                 <input

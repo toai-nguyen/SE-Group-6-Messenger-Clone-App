@@ -17,7 +17,7 @@ model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String?
   email String? @unique
-  EmailVerified DateTime?
+  emailVerified DateTime?
   image String?
   hashedPassword String?
   createdAt DateTime @default(now())
@@ -55,7 +55,7 @@ model Account {
 
 model conversation{
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  createdAte DateTime @default(now())
+  createdAt DateTime @default(now())
   lastMessageAt DateTime @default(now())
   name String?
   isGroup Boolean?
